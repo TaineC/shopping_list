@@ -19,6 +19,7 @@ h1{
 .list-item{
   padding: 1em;
   border-bottom: thin lightgrey solid;
+  position: relative;
 }
 
 .item{
@@ -26,8 +27,11 @@ h1{
   display: flex;
 }
 
-p{
-  margin-bottom: 0;
+i{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1em;
 }
 
 i:hover{
@@ -35,7 +39,6 @@ i:hover{
 }
 
 .priority{
-  text-align: right;
   font-size: 0.7em;
   color: red;
 }
@@ -58,6 +61,10 @@ input{
 
 .new-item-priority{
   padding: 0.4em 1em 0.4em 1em;
+}
+
+.update-item-input{
+  width: 90%;
 }
 
 input:focus{

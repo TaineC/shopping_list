@@ -32,9 +32,7 @@ class App extends Component{
       id: Date.now(),
       ...data
     }
-
     var newlist = [...this.state.list,newItem];
-
     this.setState({list: newlist})
   }
 
@@ -49,10 +47,8 @@ class App extends Component{
     var index = list.findIndex(function(i){
       return i.id == id;
     });
-
     var updateItem = {...list[index],...data};
     list[index] = updateItem;
-
     this.setState({list});
   }
 
@@ -67,6 +63,7 @@ class App extends Component{
                 ...listitem,
                 key: listitem.id,
                 removeItem: this.removeItem,
+                updateItem: this.updateItem
               };
               return(
                 <Item {...listitemProps}/>
