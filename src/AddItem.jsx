@@ -30,6 +30,9 @@ class AddItem extends Component{
       priority: this.state.priorityInput
     }
     this.props.submitNewItem(data);
+    
+    this.state.itemInput = '';
+    this.state.priorityInput = '';
   }
 
   render(){
